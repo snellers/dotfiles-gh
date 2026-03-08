@@ -23,17 +23,17 @@ popd
 
 echo "Setting up shell customizations"
 ln -sf ~/git/.tmux/.tmux.conf
-ln -sf ~/git/dotfiles/.tmux.conf.local
-ln -sf ~/git/dotfiles/.profile.local
+ln -sf ~/git/dotfiles-gh/.tmux.conf.local
+ln -sf ~/git/dotfiles-gh/.profile.local
 echo ". ~/.profile.local" >> .profile
-ln -sf ~/git/dotfiles/.bashrc.local
+ln -sf ~/git/dotfiles-gh/.bashrc.local
 echo ". ~/.bashrc.local" >> .bashrc
 mkdir -p .config
 cd .config
 if [ -d nvim ]; then
     mv -f nvim nvim.old
 fi
-ln -sf ~/git/dotfiles/nvim 
+ln -sf ~/git/dotfiles-gh/nvim 
 if [ -d kitty ]; then
     mv -f kitty kitty.old
 fi
