@@ -8,7 +8,8 @@ sudo apt install \
     rlwrap ripgrep tmux xsel \
     powerline kitty neovim \
     python3-dev python3-pip gparted \
-    cryptsetup lvm2
+    cryptsetup lvm2 \
+    npm
 sudo update-alternatives --install /usr/bin/vim vim /usr/bin/nvim 60
 sudo update-alternatives --config vim
 sudo update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60
@@ -38,4 +39,8 @@ if [ -d kitty ]; then
     mv -f kitty kitty.old
 fi
 cd
+
+mkdir -p node_modules
+npm install --prefix ~/ tree-sitter-cli
+ln -sf node_modules/.bin/tree-sitter .local/bin/
 
