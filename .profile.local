@@ -7,6 +7,7 @@ alias gu='git pull'
 alias gp='git push'
 alias gc='git commit'
 alias gri='git rebase -i'
+alias gb='git branch | head '
 alias ressh='eval `ssh-agent` ssh-add ~/.ssh/id_rsa'
 alias cryptclose='sudo vgchange -an vgext0 && sudo cryptsetup luksClose /dev/mapper/luks*'
 alias rsyncit="rsync -lruv --del "
